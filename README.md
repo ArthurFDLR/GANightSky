@@ -1,1 +1,0 @@
-# stylegan2-ada-notebook
