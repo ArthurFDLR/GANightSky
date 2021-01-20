@@ -198,7 +198,7 @@ from numpy import random
 seed_init = random.randint(10000)
 nbr_images = 6
 
-generation_from = 'https://firebasestorage.googleapis.com/v0/b/thisnightskydoesnotexist.appspot.com/o/NightSky.pkl?alt=media'
+generation_from = 'ffhq1024'
 
 !python "{stylegan2_repo_path / 'generate.py'}" generate-images \
     --outdir="{project_path / 'out'}" --trunc=0.7 \
@@ -225,7 +225,7 @@ latent_walk_path = project_path / 'out' / 'latent_walk'
 if not latent_walk_path.is_dir():
     %mkdir "{latent_walk_path}"
 
-explored_network = 'https://firebasestorage.googleapis.com/v0/b/thisnightskydoesnotexist.appspot.com/o/NightSky.pkl?alt=media'
+explored_network = 'ffhq1024'
 
 seeds = random.randint(10000) for  i in range(50)
 print("Base seeds:", seeds)
